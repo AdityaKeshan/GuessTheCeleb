@@ -49,18 +49,25 @@ public class MainActivity extends AppCompatActivity {
     }
     public void start(View v)
     {
-        button.setVisibility(View.INVISIBLE);
-        lin.setVisibility(View.VISIBLE);
-        generateques();
-
+        try {
+            button.setVisibility(View.INVISIBLE);
+            lin.setVisibility(View.VISIBLE);
+            generateques();
+        }
+        catch (Exception e)
+        {
+            Toast.makeText(this,"Start meh problem", Toast.LENGTH_SHORT).show();
+        }
     }
     public void generateques()
     {
+        try{
         Random ob=new Random();
         int a=ob.nextInt(100);
         int b=ob.nextInt(4)+1;
         k=b;
-        String z=names.get(a);
+        String z="";
+        Log.i("The name selected is:",names.get(a));
         Bitmap o=getBitmapFromURL(urls.get(a));
         image.setImageBitmap(o);
         if(b==1)
@@ -106,6 +113,10 @@ public class MainActivity extends AppCompatActivity {
             a=ob.nextInt(100);
             rab1.setText(names.get(a));
 
+        }}
+        catch (Exception e)
+        {
+            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
 
     }
@@ -179,6 +190,7 @@ public class MainActivity extends AppCompatActivity {
                 int i = 0;
                 while (m.find()) {
                     urls.add(m.group(1));
+                    Log.i("Urls:",m.group(1));
                     i++;
                 }
 
@@ -187,6 +199,7 @@ public class MainActivity extends AppCompatActivity {
                 i = 0;
                 while (m.find()) {
                     names.add( m.group(1));
+                    Log.i("Names:",m.group(1));
                     i++;
                 }
             } catch (ExecutionException e) {

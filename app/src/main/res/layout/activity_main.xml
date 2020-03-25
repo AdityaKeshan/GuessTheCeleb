@@ -21,9 +21,8 @@
 
     <LinearLayout
         android:id="@+id/lin"
-        android:layout_width="481dp"
-        android:layout_height="717dp"
-        android:layout_marginTop="150dp"
+        android:layout_width="360dp"
+        android:layout_height="652dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -37,41 +36,40 @@
             android:layout_height="517dp" />
 
         <RadioGroup
-            android:layout_width="481dp"
-            android:layout_height="200dp"
-            >
+            android:layout_width="match_parent"
+            android:layout_height="142dp">
 
             <RadioButton
                 android:id="@+id/rab1"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text=""
+                android:layout_height="35.5dp"
+                android:onClick="check"
                 android:tag="1"
-                android:onClick="check"/>
+                android:text="" />
 
             <RadioButton
                 android:id="@+id/rab2"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text=""
+                android:layout_height="35.5dp"
+                android:onClick="check"
                 android:tag="2"
-                android:onClick="check"/>
+                android:text="" />
 
             <RadioButton
                 android:id="@+id/rab3"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text=""
+                android:layout_height="35.5dp"
+                android:onClick="check"
                 android:tag="3"
-                android:onClick="check"/>
+                android:text="" />
 
             <RadioButton
                 android:id="@+id/rab4"
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:text=""
+                android:layout_height="35.5dp"
+                android:onClick="check"
                 android:tag="4"
-                android:onClick="check"/>
+                android:text="" />
         </RadioGroup>
 
     </LinearLayout>
